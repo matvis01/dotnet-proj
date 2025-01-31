@@ -11,8 +11,6 @@ export default function Profile(props) {
   const [password, setPassword] = useState("")
 
 
-
-
   async function submit(e) {
     e.preventDefault()
     setUser((prev) => ({
@@ -27,8 +25,6 @@ export default function Profile(props) {
     } catch (e) {
       console.log(e)
     }
-
-    console.log(user)
   }
 
   return (
@@ -38,32 +34,7 @@ export default function Profile(props) {
         <h1 className={styles.text}>User Profile</h1>
         <p className={styles.text}>Username: {user.username}</p>
         <p className={styles.text}>Email: {user.email}</p>
-        
       </div>
-
-      {/* <form className={styles.myForm} onSubmit={submit}>
-        <label className={styles.text}>Profile settings: </label>
-        <input
-          type="text-box"
-          placeholder="Username"
-          className={styles.inputCredentials}
-          value={userName}
-          onChange={(e) => {
-            setUserName(e.target.value)
-          }}
-        />
-        <input
-          type="text-box"
-          placeholder="Password"
-          className={styles.inputCredentials}
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value)
-          }}
-        />
-      
-        <input type="submit" value="Submit" className={styles.button} />
-      </form> */}
     </div>
   )
 }
